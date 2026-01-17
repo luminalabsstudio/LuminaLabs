@@ -1,0 +1,200 @@
+/* RESET I BAZA */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: white; /* Ciemne tło, nowoczesne */
+  color: #ffffff;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* HEADER */
+header {
+  background-color: rgba(253, 253, 253);
+  padding: 1.5rem 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center; /* Wyśrodkowanie całości */
+  align-items: center;
+  position: relative;
+  padding: 0 20px;
+}
+
+/* Ikonka po lewej stronie napisu */
+.company-icon {
+  height: 100px; /* Dopasuj rozmiar */
+  width: auto;
+  margin-right: 15px; /* Odstęp od napisu */
+}
+
+/* STYLIZACJA NAPISU LUMINALABS (ZGODNIE ZE ZDJĘCIEM 4) */
+.brand-name {
+  font-size: 2.5rem;
+  font-weight: 650; /* Bardzo gruby font */
+  letter-spacing: -1px;
+}
+
+/* "Lumina" - Gradient Niebieski/Morski */
+.brand-name {
+  background: linear-gradient(90deg, #2b95dd 0%, #2b95dd 40%, #8e44ad 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+/* "Labs" - Część fioletowa (robimy to jednym gradientem wyżej, ale można rozdzielić) */
+/* Efekt gradientu przechodzi płynnie przez całe słowo LuminaLabs */
+
+/* SIATKA GIER */
+main {
+  flex: 1;
+  max-width: 1600px;
+  margin: 4rem auto;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+/* KARTA GRY */
+.game-card {
+  background-color: white;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+/* KONTENER ZDJĘCIA I EFEKT PRZYCIEMNIENIA */
+.image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 200px; /* Stała wysokość zdjęcia */
+  overflow: hidden;
+}
+
+.game-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Zdjęcie wypełni obszar bez zniekształceń */
+  transition: filter 0.3s ease;
+}
+
+/* PLACEHOLDER DLA COMING SOON */
+.placeholder-image {
+  width: 100%;
+  height: 100%;
+  background: gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  color: rgba(255, 255, 255, 0.2);
+}
+
+/* OVERLAY (NAKŁADKA) */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(15, 23, 42, 0.85); /* Ciemne przyciemnienie */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0; /* Domyślnie niewidoczne */
+  transition: opacity 0.3s ease;
+}
+
+/* EFEKT HOVER - POKAŻ NAKŁADKĘ */
+.image-wrapper:hover .overlay {
+  opacity: 1;
+}
+
+/* PRZYCISK GOOGLE PLAY */
+.play-button img {
+  height: 60px; /* Rozmiar odznaki */
+  transition: transform 0.2s;
+}
+
+.play-button:hover img {
+  transform: scale(1.05);
+}
+
+.soon-text {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #cbd5e1;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border: 2px solid #cbd5e1;
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+
+/* INFORMACJE O GRZE */
+.game-info {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.game-info h2 {
+  margin-bottom: 0.5rem;
+  color: black;
+  font-size: 1.5rem;
+}
+
+.game-info p {
+  color: #828a95;
+  font-size: 0.9rem;
+}
+
+/* FOOTER */
+footer {
+  background-color: white;
+  padding: 2rem 0;
+  text-align: center;
+  color: #64748b;
+  margin-top: auto;
+}
+
+footer a {
+  color: #2b95dd;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+footer a:hover {
+  color: #8e44ad;
+}
+
+/* RESPANSYWNOŚĆ */
+@media (max-width: 600px) {
+  .brand-name {
+    font-size: 1.8rem;
+  }
+  .header-content {
+    flex-direction: row; /* Zostawiamy w rzędzie */
+  }
+  .company-icon {
+    height: 40px;
+  }
+}
