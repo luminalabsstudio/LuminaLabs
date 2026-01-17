@@ -8,7 +8,7 @@
 body {
   font-family: "Poppins", sans-serif;
   background-color: white; /* Ciemne tło, nowoczesne */
-  color: #ffffff;
+  color: black;
   line-height: 1.6;
   display: flex;
   flex-direction: column;
@@ -47,10 +47,7 @@ header {
   font-size: 2.5rem;
   font-weight: 650; /* Bardzo gruby font */
   letter-spacing: -1px;
-}
-
-/* "Lumina" - Gradient Niebieski/Morski */
-.brand-name {
+  text-decoration: none;
   background: linear-gradient(90deg, #2b95dd 0%, #2b95dd 40%, #8e44ad 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -197,4 +194,101 @@ footer a:hover {
   .company-icon {
     height: 40px;
   }
+}
+
+/* Contact Form Styles */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-sizing: border-box; /* Important for padding */
+}
+
+.form-textarea {
+  resize: vertical;
+  height: 120px;
+}
+
+.btn-submit {
+  background: linear-gradient(to right, #2196f3, #9c27b0);
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  transition: opacity 0.3s ease;
+}
+
+.btn-submit:hover {
+  opacity: 0.9;
+}
+
+/* Privacy Policy Styles */
+.privacy-content h2 {
+  color: #444;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+  margin-top: 30px;
+}
+
+.privacy-content ul {
+  padding-left: 20px;
+}
+
+.privacy-content li {
+  margin-bottom: 10px;
+}
+
+.privacy-content p {
+  color: #828a95;
+}
+/* --- NOWE STYLE DLA STRONY KONTAKT (EMAIL) --- */
+
+.contact-wrapper {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.contact-text {
+  color: #828a95;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  line-height: 1.8;
+}
+
+.email-button {
+  display: inline-block;
+  background: linear-gradient(90deg, #2b95dd 0%, #8e44ad 100%);
+  color: white;
+  padding: 15px 40px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 15px rgba(43, 149, 221, 0.3);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.email-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(142, 68, 173, 0.4);
+  color: white; /* Zapewnia, że tekst pozostanie biały */
 }
