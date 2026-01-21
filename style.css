@@ -18,8 +18,7 @@ body {
 /* HEADER */
 header {
   background-color: rgba(253, 253, 253);
-  padding: 1.5rem 0;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  padding: 1rem 0;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -239,24 +238,36 @@ footer a:hover {
   opacity: 0.9;
 }
 
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
 /* Privacy Policy Styles */
+.privacy-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #333; /* lub Twój kolor tekstu */
+}
+
 .privacy-content h2 {
-  color: #444;
-  border-bottom: 1px solid #eee;
-  padding-bottom: 10px;
+  font-size: 1.5rem;
   margin-top: 30px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.privacy-content p,
+.privacy-content li {
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 15px;
 }
 
 .privacy-content ul {
   padding-left: 20px;
-}
-
-.privacy-content li {
-  margin-bottom: 10px;
-}
-
-.privacy-content p {
-  color: #828a95;
+  margin-bottom: 20px;
 }
 /* --- NOWE STYLE DLA STRONY KONTAKT (EMAIL) --- */
 
