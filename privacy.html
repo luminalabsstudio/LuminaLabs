@@ -69,22 +69,19 @@
       <p>
         Trackly is a TV show and movie tracking app. Unlike our games, Trackly
         has <strong>no advertisements and no analytics or crash-tracking
-        SDKs</strong>. Creating an account is optional — Trackly works fully
-        with local-only tracking if you never sign up. Its data handling is as
-        follows:
+        SDKs</strong>. Trackly requires a free account (email and password, or
+        Google sign-in) to use the app, so your library reliably syncs across
+        your devices. Its data handling is as follows:
       </p>
       <p><strong>Data stored on your device:</strong> Trackly stores your
       library (tracked shows/movies, episode watch status, ratings, reviews),
       custom lists, profile display name/username/bio, and app settings
-      locally on your device, using standard app storage. If you don't create
-      an account, this data is never transmitted to us or any third party
-      except TMDB (see below). Uninstalling the app deletes it. The in-app
-      "Export my data" feature creates a JSON file that is shared only
+      locally on your device as well as in your account (see below), using
+      standard app storage. Uninstalling the app deletes the local copy. The
+      in-app "Export my data" feature creates a JSON file that is shared only
       through the method you choose.</p>
-      <p><strong>Optional accounts and cloud sync:</strong> Trackly offers an
-      optional account (email and password, or Google sign-in) so your
-      tracking data can sync across your own devices. Authentication is
-      handled by <a href="https://supabase.com/privacy" target="_blank">Supabase</a>,
+      <p><strong>Account and cloud sync:</strong> Authentication is handled
+      by <a href="https://supabase.com/privacy" target="_blank">Supabase</a>,
       our backend and database provider — passwords are never visible to us;
       Supabase stores them in hashed form and handles the sign-in process
       directly. If you sign in with Google, we receive the email address
@@ -143,7 +140,7 @@
         <li>
           <a href="https://supabase.com/privacy" target="_blank"
             ><strong>Supabase</strong></a
-          > — used by Trackly, for optional account authentication and cloud sync
+          > — used by Trackly, for account authentication and cloud sync
         </li>
         <li>
           <a href="https://policies.google.com/privacy" target="_blank"
@@ -160,9 +157,8 @@
         third-party analytics and advertising services per their own
         retention policies. For Trackly, library and profile data lives on
         your device and is retained until you delete it or uninstall the app.
-        If you created a Trackly account, that data is also retained on
-        Supabase's servers until you request account deletion (see Section
-        1B).
+        Your account data is also retained on Supabase's servers until you
+        request account deletion (see Section 1B).
       </p>
 
       <h2>4. Children's Privacy</h2>
@@ -185,9 +181,9 @@
       <p>
         <strong>Trackly:</strong> You can delete your local data at any time
         via Settings → "Clear library &amp; lists" in the app, or by
-        uninstalling the app. If you created an account, you can sign out at
-        any time from Settings → Account; to delete your account and all
-        associated cloud data, email us at
+        uninstalling the app. You can sign out of your account at any time
+        from Settings → Account; to delete your account and all associated
+        cloud data, email us at
         <strong>lumina.labs.studio@gmail.com</strong>.
       </p>
 
