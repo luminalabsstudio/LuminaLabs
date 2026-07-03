@@ -22,7 +22,7 @@
 
     <main class="container privacy-content">
       <h1>Privacy Policy</h1>
-      <p class="last-updated">Last updated: July 2, 2026</p>
+      <p class="last-updated">Last updated: July 3, 2026</p>
 
       <p>
         This Privacy Policy applies to <strong>Sudoku Scapes</strong>,
@@ -68,17 +68,39 @@
       <h3 id="trackly">B. Trackly</h3>
       <p>
         Trackly is a TV show and movie tracking app. Unlike our games, Trackly
-        currently has <strong>no advertisements, no user accounts, and no
-        analytics or crash-tracking SDKs</strong>. Its data handling is as
+        has <strong>no advertisements and no analytics or crash-tracking
+        SDKs</strong>. Creating an account is optional — Trackly works fully
+        with local-only tracking if you never sign up. Its data handling is as
         follows:
       </p>
       <p><strong>Data stored on your device:</strong> Trackly stores your
       library (tracked shows/movies, episode watch status, ratings, reviews),
       custom lists, profile display name/username/bio, and app settings
-      locally on your device only, using standard app storage. This data is
-      never transmitted to us — Trackly has no backend server. Uninstalling
-      the app deletes it. The in-app "Export my data" feature creates a JSON
-      file that is shared only through the method you choose.</p>
+      locally on your device, using standard app storage. If you don't create
+      an account, this data is never transmitted to us or any third party
+      except TMDB (see below). Uninstalling the app deletes it. The in-app
+      "Export my data" feature creates a JSON file that is shared only
+      through the method you choose.</p>
+      <p><strong>Optional accounts and cloud sync:</strong> Trackly offers an
+      optional account (email and password, or Google sign-in) so your
+      tracking data can sync across your own devices. Authentication is
+      handled by <a href="https://supabase.com/privacy" target="_blank">Supabase</a>,
+      our backend and database provider — passwords are never visible to us;
+      Supabase stores them in hashed form and handles the sign-in process
+      directly. If you sign in with Google, we receive the email address
+      associated with your Google account.</p>
+      <p>When you create an account, the following is stored on Supabase's
+      servers, tied to your account, so it can sync between your devices:
+      your library (shows/movies tracked, watch status, watched episodes,
+      ratings, reviews), custom lists, profile info (display name, username,
+      bio), notification and platform preferences, and theme preference.
+      Show/movie metadata (titles, posters, cast, etc.) is <em>not</em> stored
+      on our servers — each device fetches that directly from TMDB as
+      needed.</p>
+      <p>Signing out stops your device from syncing further changes, but does
+      not delete your account or the data already stored. To request deletion
+      of your account and its associated data, email us at
+      <strong>lumina.labs.studio@gmail.com</strong>.</p>
       <p><strong>Data sent over the network:</strong> To show title
       information, Trackly sends your search terms and title requests to
       <strong>The Movie Database (TMDB)</strong> (themoviedb.org). No personal
@@ -98,9 +120,8 @@
         <li><strong>File access:</strong> used only when you choose to import
         or export a file, through the system file picker.</li>
       </ul>
-      <p>If future versions of Trackly add accounts, cloud sync, ads or
-      analytics, this section will be updated accordingly before that version
-      is released.</p>
+      <p>If future versions of Trackly add ads or analytics, this section
+      will be updated accordingly before that version is released.</p>
 
       <h2>2. Third-Party Services</h2>
       <p>
@@ -119,6 +140,16 @@
             ><strong>The Movie Database (TMDB)</strong></a
           > — used by Trackly, to provide show/movie data
         </li>
+        <li>
+          <a href="https://supabase.com/privacy" target="_blank"
+            ><strong>Supabase</strong></a
+          > — used by Trackly, for optional account authentication and cloud sync
+        </li>
+        <li>
+          <a href="https://policies.google.com/privacy" target="_blank"
+            ><strong>Google Sign-In</strong></a
+          > — used by Trackly, only if you choose to sign in with Google
+        </li>
       </ul>
 
       <h2>3. Data Retention</h2>
@@ -127,9 +158,11 @@
         and for a reasonable time thereafter. For Sudoku Scapes and Life
         Logic, automatically collected information is managed by our
         third-party analytics and advertising services per their own
-        retention policies. For Trackly, all library and profile data lives
-        only on your device and is retained until you delete it or uninstall
-        the app.
+        retention policies. For Trackly, library and profile data lives on
+        your device and is retained until you delete it or uninstall the app.
+        If you created a Trackly account, that data is also retained on
+        Supabase's servers until you request account deletion (see Section
+        1B).
       </p>
 
       <h2>4. Children's Privacy</h2>
@@ -150,9 +183,12 @@
         advertising ID) to limit ad tracking.
       </p>
       <p>
-        <strong>Trackly:</strong> Since Trackly stores data only on your
-        device, you can delete it at any time via Settings → "Clear library &
-        lists" in the app, or by uninstalling the app.
+        <strong>Trackly:</strong> You can delete your local data at any time
+        via Settings → "Clear library &amp; lists" in the app, or by
+        uninstalling the app. If you created an account, you can sign out at
+        any time from Settings → Account; to delete your account and all
+        associated cloud data, email us at
+        <strong>lumina.labs.studio@gmail.com</strong>.
       </p>
 
       <h2>6. Changes to This Privacy Policy</h2>
