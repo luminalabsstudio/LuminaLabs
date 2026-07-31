@@ -22,7 +22,7 @@
 
     <main class="container privacy-content">
       <h1>Privacy Policy</h1>
-      <p class="last-updated">Last updated: July 3, 2026</p>
+      <p class="last-updated">Last updated: July 31, 2026</p>
 
       <p>
         This Privacy Policy applies to <strong>Sudoku Scapes</strong>,
@@ -71,52 +71,61 @@
         has <strong>no advertisements and no analytics or crash-tracking
         SDKs</strong>. Trackly requires a free account (email and password, or
         Google sign-in) to use the app, so your library reliably syncs across
-        your devices. Its data handling is as follows:
+        your devices and so its social features can work. Its data handling is
+        as follows:
       </p>
-      <p><strong>Data stored on your device:</strong> Trackly stores your
-      library (tracked shows/movies, episode watch status, ratings, reviews),
-      custom lists, profile display name/username/bio, and app settings
-      locally on your device as well as in your account (see below), using
-      standard app storage. Uninstalling the app deletes the local copy. The
-      in-app "Export my data" feature creates a JSON file that is shared only
-      through the method you choose.</p>
-      <p><strong>Account and cloud sync:</strong> Authentication is handled
-      by <a href="https://supabase.com/privacy" target="_blank">Supabase</a>,
-      our backend and database provider — passwords are never visible to us;
-      Supabase stores them in hashed form and handles the sign-in process
-      directly. If you sign in with Google, we receive the email address
-      associated with your Google account.</p>
-      <p>When you create an account, the following is stored on Supabase's
-      servers, tied to your account, so it can sync between your devices:
-      your library (shows/movies tracked, watch status, watched episodes,
-      ratings, reviews), custom lists, profile info (display name, username,
-      bio), notification and platform preferences, and theme preference.
-      Show/movie metadata (titles, posters, cast, etc.) is <em>not</em> stored
-      on our servers — each device fetches that directly from TMDB as
-      needed.</p>
-      <p>Signing out stops your device from syncing further changes, but does
-      not delete your account or the data already stored. To request deletion
-      of your account and its associated data, email us at
+      <p><strong>What we store.</strong> Your library (shows/movies tracked,
+      watched episodes, ratings, reviews), custom lists, profile (display name,
+      username, bio, profile picture), unlocked badges and app settings are
+      stored on your device and, tied to your account, on
+      <a href="https://supabase.com/privacy" target="_blank">Supabase</a>'s
+      servers so they sync between your devices. Supabase also handles sign-in
+      — passwords are never visible to us. If you sign in with Google, we
+      receive the email address of your Google account. Show and movie
+      metadata is <em>not</em> stored on our servers; each device fetches it
+      from TMDB as needed.</p>
+
+      <p><strong>What other users can see.</strong> While you are signed in you
+      have a public profile inside the app, and there is currently no way to
+      use an account with that profile hidden. Other signed-in users can see
+      your username, profile picture, banner, bio, join month, your watching
+      statistics and badges, which titles are in your library with their status
+      and your rating, a feed of what you recently watched or rated, who you
+      follow, and any comments you post. Your exact watch dates, custom lists,
+      written reviews and settings stay private. Comments are public by design
+      — please do not put anything private in them.</p>
+
+      <p><strong>Reporting and blocking.</strong> You can report any comment,
+      and block any user from their comment or profile. Blocking hides that
+      account from you, removes the follow in both directions, and stops them
+      following or replying to you; they are not notified. Undo it under
+      Settings → Blocked users.</p>
+
+      <p><strong>Deleting your account.</strong> Open
+      <strong>Settings → Account → Delete account</strong> in the app. This
+      permanently erases your account and everything above — library, lists,
+      ratings, profile, comments, follows and notification registrations — on
+      our servers and on every synced device. It cannot be undone. Signing out
+      alone deletes nothing. If you can no longer sign in, email us at
       <strong>lumina.labs.studio@gmail.com</strong>.</p>
-      <p><strong>Data sent over the network:</strong> To show title
-      information, Trackly sends your search terms and title requests to
-      <strong>The Movie Database (TMDB)</strong> (themoviedb.org). No personal
-      profile data or library contents are sent — only the search queries and
-      title IDs needed to fetch metadata, artwork and episode information.
-      This product uses the TMDB API but is not endorsed or certified by
-      TMDB; see TMDB's own policy at
-      <a href="https://www.themoviedb.org/privacy-policy" target="_blank">themoviedb.org/privacy-policy</a>.</p>
-      <p><strong>Optional device permissions:</strong></p>
-      <ul>
-        <li><strong>Calendar:</strong> only used if you tap "Add to calendar"
-        for an episode; creates a single event on your device. Trackly does
-        not read your existing calendar.</li>
-        <li><strong>Notifications:</strong> used to schedule local episode
-        reminders you opt into. Generated on-device; no push server is
-        involved.</li>
-        <li><strong>File access:</strong> used only when you choose to import
-        or export a file, through the system file picker.</li>
-      </ul>
+
+      <p><strong>Data sent over the network.</strong> Trackly sends your search
+      terms and title requests to <strong>The Movie Database (TMDB)</strong>,
+      and title or show ids to <strong>OMDb</strong> (IMDb scores) and
+      <strong>TVmaze</strong> (exact episode broadcast times for reminders). It
+      loads country flag images from <strong>flagcdn.com</strong>. None of
+      these requests include your account, profile or library. This product
+      uses the TMDB API but is not endorsed or certified by TMDB.</p>
+
+      <p><strong>Permissions and notifications.</strong> Episode reminders you
+      opt into are scheduled locally on your device. If social notifications
+      are on, your device also registers a push token so we can tell you about
+      new followers, replies and likes; it is deleted when you turn them off,
+      sign out or delete your account, and delivery goes through Expo and
+      Google Firebase Cloud Messaging. Calendar access is used only when you
+      tap "Add to calendar" (Trackly never reads your calendar), photo access
+      only when you pick a profile picture, and file access only when you
+      import or export data.</p>
       <p>If future versions of Trackly add ads or analytics, this section
       will be updated accordingly before that version is released.</p>
 
@@ -147,6 +156,22 @@
             ><strong>Google Sign-In</strong></a
           > — used by Trackly, only if you choose to sign in with Google
         </li>
+        <li>
+          <a href="https://www.omdbapi.com/legal.htm" target="_blank"
+            ><strong>OMDb API</strong></a
+          > and
+          <a href="https://www.tvmaze.com/privacy" target="_blank"
+            ><strong>TVmaze</strong></a
+          > — used by Trackly, for IMDb scores and episode broadcast times
+        </li>
+        <li>
+          <a href="https://expo.dev/privacy" target="_blank"
+            ><strong>Expo</strong></a
+          > and
+          <a href="https://firebase.google.com/support/privacy" target="_blank"
+            ><strong>Google Firebase Cloud Messaging</strong></a
+          > — used by Trackly, to deliver notifications to your device
+        </li>
       </ul>
 
       <h2>3. Data Retention</h2>
@@ -158,7 +183,8 @@
         retention policies. For Trackly, library and profile data lives on
         your device and is retained until you delete it or uninstall the app.
         Your account data is also retained on Supabase's servers until you
-        request account deletion (see Section 1B).
+        delete your account from within the app, which erases it immediately
+        (see Section 1B).
       </p>
 
       <h2>4. Children's Privacy</h2>
@@ -182,9 +208,11 @@
         <strong>Trackly:</strong> You can delete your local data at any time
         via Settings → "Clear library &amp; lists" in the app, or by
         uninstalling the app. You can sign out of your account at any time
-        from Settings → Account; to delete your account and all associated
-        cloud data, email us at
-        <strong>lumina.labs.studio@gmail.com</strong>.
+        from Settings → Account. To delete your account and all associated
+        cloud data, use <strong>Settings → Account → Delete account</strong>
+        in the app — this erases everything immediately and permanently. You
+        can also export a full copy of your data at any time via Settings →
+        "Import &amp; export data".
       </p>
 
       <h2>6. Changes to This Privacy Policy</h2>
