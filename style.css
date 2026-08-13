@@ -93,6 +93,18 @@ main {
   transition: filter 0.3s ease;
 }
 
+/* Okładka Trackly to grafika promocyjna ze Sklepu Play (2:1) — szersza niż
+   kadr karty, więc "cover" ucinałby logo z lewej strony. "contain" pokazuje
+   ją w całości, a tło powtarza gradient samej grafiki, żeby pasy nad i pod
+   nią nie odcinały się od artworku. */
+.image-wrapper.trackly {
+  background: linear-gradient(#1b1038, #0b0a12);
+}
+
+.trackly-image {
+  object-fit: contain;
+}
+
 /* PLACEHOLDER DLA COMING SOON */
 .placeholder-image {
   width: 100%;
