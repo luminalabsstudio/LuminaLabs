@@ -105,6 +105,20 @@ main {
   object-fit: contain;
 }
 
+/* Evolution Clicker nie ma jeszcze grafiki promocyjnej ze Sklepu Play, więc
+   okładkę składamy z zasobów samej gry: tło biomu oceanicznego jako podkład
+   i stworzenie na wierzchu. Po przygotowaniu feature graphic podmień to na
+   jeden plik, tak jak w Trackly. */
+.image-wrapper.evolution {
+  background: url("evolution-bg.jpg") center / cover no-repeat;
+}
+
+.evolution-image {
+  object-fit: contain;
+  padding: 1.25rem;
+  box-sizing: border-box;
+}
+
 /* PLACEHOLDER DLA COMING SOON */
 .placeholder-image {
   width: 100%;
